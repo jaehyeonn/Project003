@@ -20,9 +20,8 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "player")
+        if(other.tag == "Player")
         {
-            Debug.Log("ºÎµúÈû??");
             PlayerControler playerControler = other.GetComponent<PlayerControler>();
 
             if(playerControler != null)
