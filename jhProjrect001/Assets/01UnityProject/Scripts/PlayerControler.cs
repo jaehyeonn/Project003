@@ -11,27 +11,18 @@ public class PlayerControler : MonoBehaviour
     void Start()
     {
         playerRigid = GetComponent<Rigidbody>();
+
+        Debug.Assert(playerRigid);
+
+        if (playerRigid == null)
+        GFunc.Log("이거 로그 그대로 잘 찍힌다.");
     }
+    
 
     // Update is called once per frame
     void Update()
     {
-        //if(Input.GetKey(KeyCode.UpArrow)== true)
-        //{
-        //    playerRigid.AddForce(0f, 0f, speed);
-        //}
-        //if (Input.GetKey(KeyCode.DownArrow) == true)
-        //{
-        //    playerRigid.AddForce(0f, 0f, -speed);
-        //}
-        //if (Input.GetKey(KeyCode.RightArrow) == true)
-        //{
-        //    playerRigid.AddForce(speed, 0f, 0f);
-        //}
-        //if (Input.GetKey(KeyCode.LeftArrow) == true)
-        //{
-        //    playerRigid.AddForce(-speed, 0f, 0f);
-        //}
+       
 
         float xInput = Input.GetAxis("Horizontal");
         float zInput = Input.GetAxis("Vertical");

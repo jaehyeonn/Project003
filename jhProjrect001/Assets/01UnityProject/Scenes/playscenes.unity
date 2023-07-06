@@ -1374,8 +1374,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverUi: {fileID: 325175876}
-  timeText: {fileID: 1582326769}
-  recordText: {fileID: 1295073640}
+  timeText: {fileID: 1582326766}
+  recordText: {fileID: 1295073637}
 --- !u!4 &1773231266
 Transform:
   m_ObjectHideFlags: 0

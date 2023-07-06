@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public GameObject gameOverUi = default;
-    public Text timeText = default;
-    public Text recordText = default;
+    public GameObject timeText = default;
+    public GameObject recordText = default;
 
     private float surviveTime = default;
     private bool isGameOver = default;
@@ -25,7 +25,8 @@ public class GameManager : MonoBehaviour
         if(isGameOver == false)
         {
             surviveTime += Time.deltaTime;
-            timeText.text = string.Format("Time : {0}",(int)surviveTime);
+            timeText.SetText( string.Format("Time : {0}",(int)surviveTime));
+            //timeText.text = string.Format("Time : {0}",(int)surviveTime);
         }
         
             if(Input.GetKeyDown(KeyCode.R))
@@ -46,6 +47,7 @@ public class GameManager : MonoBehaviour
             bestTime = surviveTime;
             PlayerPrefs.SetFloat("BestTime", bestTime);
         }
-        recordText.text = string.Format("Best Time: {0}",(int)bestTime);
+        recordText.SetText(string.Format("Best Time: {0}", (int)bestTime));
+        //recordText.text = string.Format("Best Time: {0}",(int)bestTime);
     }
 }
